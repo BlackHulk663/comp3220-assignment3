@@ -1,15 +1,15 @@
-fever,flu,covid-19,chickenpox,hiv
+fever,flu,covid-19,chickenpox,hiv,malaria,pneumonia,measles,tetanus,tuberculosis
 muscle ache,flu,hiv
-chills,flu,hiv
+chills,flu,hiv,malaria,tuberculosis
 sweats,flu
-headache,flu,covid-19,chickenpox
-dry cough,flu
+headache,flu,covid-19,chickenpox,malaria
+dry cough,flu,measles
 tiredness,flu
-sore throat,flu,covid-19,hiv
+sore throat,flu,covid-19,hiv,measles
 eye pain,flu
-vomiting,flu
+vomiting,flu,malaria
 coughing,covid-19
-diarrhea,covid-19
+diarrhea,covid-19,malaria
 nausea,covid-19
 congestion,covid-19
 urinate often,diabetes
@@ -18,8 +18,18 @@ blurry vision,diabetes
 numb hands,diabetes
 dry skin,diabetes
 sores,diabetes
-loss of appetite,chickenpox
-rash,hiv
-night sweats,hiv
+loss of appetite,chickenpox,pneumonia,tuberculosis
+rash,hiv,measles
+night sweats,hiv,tuberculosis
 mouth ulcers,hiv
 swollen lymph nodes,hiv
+rapid heart rate,malaria
+chest pain,pneumonia
+low energy,pneumonia
+confusion,pneumonia
+inflamed eyes,measles
+white spots,measles
+jaw cramps,tetanus
+muscle spasms,tetanus
+sweating,tetanus
+weight loss,tuberculosis

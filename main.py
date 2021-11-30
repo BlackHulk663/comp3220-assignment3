@@ -1,6 +1,5 @@
 import data_loader as dl
 
-
 def find_possible_diseases(data, symptoms):
     result = {}
     for sym in symptoms:
