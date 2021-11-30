@@ -15,7 +15,7 @@ class Disease:
     def get_format_data(self):
         sym = ":".join(self.major_symptoms)
         treat = ":".join(self.treatment)
-        return f"{self.name},{self.min_age}-{self.max_age},{self.description},{sym},{treat}"
+        return f"{self.name},{self.min_age}-{self.max_age},{self.description},{sym},{treat}\n"
     
     def matching_symptoms_count(self, symptoms):
         result = 0
@@ -82,7 +82,7 @@ def load_symptom_data_from_file():
     for line in lines:
         data = line.split(",")
         
-        if len(data) > 3:
+        if len(data) >= 2:
             k = data[0].strip().lower()
             data = data[1:]
             for i,d in enumerate(data):

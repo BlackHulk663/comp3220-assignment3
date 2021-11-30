@@ -1,3 +1,5 @@
 flu,0-99,Influenza is a viral infection that attacks your respiratory system - your nose throat and lungs. Influenza is commonly called the flu but it's not the same as stomach "flu" viruses that cause diarrhea and vomiting.,fever:muscle ache:chills:sweats:headache:dry cough:tiredness:sore throat:eye pain:vomiting,See a doctor.
-
 covid-19,0-99,Coronaviruses are a type of virus. There are many different kinds and some cause disease. A coronavirus identified in 2019 SARS-CoV-2 has caused a pandemic of respiratory illness called COVID-19.,coughing:fever:sore throat:diarrhea:headache:nausea:congestion,See a doctor.
+diabetes,0-99,Diabetes is a chronic (long-lasting) health condition that affects how your body turns food into energy.,urinate often:very thirsty:blurry vision:numb hands:dry skin:sores,See a doctor.
+chickenpox,0-99,Chickenpox is a highly contagious disease caused by the varicella-zoster virus (VZV). It can cause an itchy blister-like rash.,fever:headache:loss of appetite,See a doctor.
+hiv,0-99,HIV (human immunodeficiency virus) is a virus that attacks the body's immune system.,fever:chills:rash:night sweats:muscle ache:sore throat:mouth ulcers:swollen lymph nodes,See a doctor.

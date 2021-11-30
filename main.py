@@ -7,25 +7,21 @@ def find_possible_diseases(data, symptoms):
         if sym in data:
             diseases = data[sym]
             for d in diseases:
-                if d in result:
-                    result[d] += 1
-                else:
-                    result[d] = 1
+                result[d] = 1
     
     ordered_result = []
     for k, v in result.items():
         ordered_result.append(k)
-        
-    ordered_result.sort(reverse=True)
+    
     return ordered_result
             
 
 def rank_order_disease(diseases:list, symptoms:list, age:int, dise_data:dict):
     
     result = {}
-    for k, v in dise_data.items():
-        r = v.quantify(symptoms, age)
-        result[k] = r
+    for d in diseases:
+        r = dise_data[d].quantify(symptoms, age)
+        result[d] = r
         
     result = sorted(result.items(), key=lambda x: x[1], reverse=True)
     

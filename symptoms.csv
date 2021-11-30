@@ -1,14 +1,25 @@
-fever,flu,covid-19
-muscle ache,flu
-chills,flu
+fever,flu,covid-19,chickenpox,hiv
+muscle ache,flu,hiv
+chills,flu,hiv
 sweats,flu
-headache,flu,covid-19
+headache,flu,covid-19,chickenpox
 dry cough,flu
 tiredness,flu
-sore throat,flu,covid-19
+sore throat,flu,covid-19,hiv
 eye pain,flu
 vomiting,flu
 coughing,covid-19
 diarrhea,covid-19
 nausea,covid-19
 congestion,covid-19
+urinate often,diabetes
+very thirsty,diabetes
+blurry vision,diabetes
+numb hands,diabetes
+dry skin,diabetes
+sores,diabetes
+loss of appetite,chickenpox
+rash,hiv
+night sweats,hiv
+mouth ulcers,hiv
+swollen lymph nodes,hiv
