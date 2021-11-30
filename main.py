@@ -20,8 +20,16 @@ def find_possible_diseases(data, symptoms):
     return ordered_result
             
 
-def rank_order_disease(diseases, symptoms, dise_data):
-    pass
+def rank_order_disease(diseases:list, symptoms:list, age:int, dise_data:dict):
+    
+    result = {}
+    for k, v in dise_data.items():
+        r = v.quantify(symptoms, age)
+        result[k] = r
+        
+    result = sorted(result.items(), key=lambda x: x[1], reverse=True)
+    
+    return result
 
 
 def main():
@@ -45,8 +53,12 @@ def main():
 
     diseases = find_possible_diseases(symp_data, symptoms)
     
-    for d in diseases:
-        print(d)
+    outcome = rank_order_disease(diseases, symptoms, age, dise_data)
+    
+    print()
+    for k in outcome:
+        dise_data[k[0]].output_format_data()
+        print()
  
 if __name__ == "__main__":
     main()

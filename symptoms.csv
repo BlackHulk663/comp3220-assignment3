@@ -1,5 +1,14 @@
-s1,d1,d2
-s2,d1,d5
-s3,d1,d2
-s4,d3,d4,d5
-s5,d4
+fever,flu,covid-19
+muscle ache,flu
+chills,flu
+sweats,flu
+headache,flu,covid-19
+dry cough,flu
+tiredness,flu
+sore throat,flu,covid-19
+eye pain,flu
+vomiting,flu
+coughing,covid-19
+diarrhea,covid-19
+nausea,covid-19
+congestion,covid-19

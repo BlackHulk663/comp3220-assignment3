@@ -1,5 +1,3 @@
-d1,30-35,Make you fell bad bad,s1:s2:s3
-d2,50-80,Pain,s1:s3
-d3,21-27,Dont catch,s4
-d4,3-5,You'll get better soon,s4:s5
-d5,12-14,Dont like,s2:s4
+flu,0-99,Influenza is a viral infection that attacks your respiratory system - your nose throat and lungs. Influenza is commonly called the flu but it's not the same as stomach "flu" viruses that cause diarrhea and vomiting.,fever:muscle ache:chills:sweats:headache:dry cough:tiredness:sore throat:eye pain:vomiting,See a doctor.
+
+covid-19,0-99,Coronaviruses are a type of virus. There are many different kinds and some cause disease. A coronavirus identified in 2019 SARS-CoV-2 has caused a pandemic of respiratory illness called COVID-19.,coughing:fever:sore throat:diarrhea:headache:nausea:congestion,See a doctor.

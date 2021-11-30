@@ -1,11 +1,11 @@
 class Disease:
-    def __init__(self, name, min_age, max_age, desc, major_sym = None, minor_sym = None, treat = None):
+    def __init__(self, name, min_age, max_age, desc, major_sym = None, treat = None):
         self.name = name
         self.min_age = min_age
         self.max_age = max_age
         self.description = desc
         self.major_symptoms = major_sym
-        self.minor_symptoms = minor_sym
+        # self.minor_symptoms = minor_sym
         self.treatment = treat
         
         
@@ -14,11 +14,37 @@ class Disease:
     
     def get_format_data(self):
         sym = ":".join(self.major_symptoms)
-        return f"{self.name},{self.min_age}-{self.max_age},{self.description},{sym}\n"
+        treat = ":".join(self.treatment)
+        return f"{self.name},{self.min_age}-{self.max_age},{self.description},{sym},{treat}"
     
+    def matching_symptoms_count(self, symptoms):
+        result = 0
+        
+        for i in symptoms:
+            if i in self.major_symptoms:
+                result += 1
+                
+        return result
     
-    def quantify(self, symptoms):
-        pass
+    def quantify(self, symptoms, age):
+        r = self.matching_symptoms_count(symptoms)#/ len(self.major_symptoms)
+        
+        if self.min_age >= age >= self.max_age:
+            r += 5
+        return r
+    
+    def output_format_data(self):
+        print("Disease: " + self.name)
+        print(self.description)
+        print(f"\nCommonly affects ages {self.min_age} to {self.max_age}")
+        print("\nSymptoms:")
+        for s in self.major_symptoms:
+            print(f"\t> {s}")
+        print("\n\nTreatment")
+        for t in self.treatment:
+            print(f"\t> {t}")
+        
+        
 
 
 def load_disease_data_from_file():
@@ -28,18 +54,20 @@ def load_disease_data_from_file():
     
     for line in lines:
         data = line.split(",")
-        k = data[0].strip().lower()
-        age_range = data[1].split("-")
-        min_age = int(age_range[0])
-        max_age = int(age_range[1])
-        desc= data[2].strip()
-        symptoms = data[3].split(":")
-        
-        for i, s in enumerate(symptoms):
-            symptoms[i] = s.strip()
-        
-        d = Disease(k, min_age, max_age, desc, symptoms)
-        result[k] = d
+        if len(data) >= 5:
+            k = data[0].strip().lower()
+            age_range = data[1].split("-")
+            min_age = int(age_range[0])
+            max_age = int(age_range[1])
+            desc= data[2].strip()
+            symptoms = data[3].split(":")
+            treatment = data[4].split(":")
+            
+            for i, s in enumerate(symptoms):
+                symptoms[i] = s.strip()
+            
+            d = Disease(k, min_age, max_age, desc, symptoms, treatment)
+            result[k] = d
         
     
     fileHandle.close()
@@ -54,7 +82,7 @@ def load_symptom_data_from_file():
     for line in lines:
         data = line.split(",")
         
-        if len(data) > 1:
+        if len(data) > 3:
             k = data[0].strip().lower()
             data = data[1:]
             for i,d in enumerate(data):
